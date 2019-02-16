@@ -5,5 +5,7 @@ RewriteEngine on
 
 #RewriteRule ^local/ - [L]
 #RewriteRule ^local$ - [L]
+
+#forwards path from 'path.php?path=/api/foo' to /a-folder/api/foo
 RewriteRule ^(.*)$ path.php?path=$1 [QSA]
 </IfModule>

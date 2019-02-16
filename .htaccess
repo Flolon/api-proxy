@@ -1,0 +1,9 @@
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+Options +FollowSymlinks
+RewriteEngine on
+
+#RewriteRule ^local/ - [L]
+#RewriteRule ^local$ - [L]
+RewriteRule ^(.*)$ path.php?path=$1 [QSA]
+</IfModule>
